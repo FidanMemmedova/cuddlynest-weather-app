@@ -1,0 +1,94 @@
+@import "../../../../../Assets/variables.scss";
+
+.cityCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $accent-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  padding: 20px;
+  cursor: pointer;
+  color: $white-color;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .cityInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .cityImage {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      overflow: hidden;
+      border-radius: 7px;
+    }
+
+    .cityName {
+      font-size: $font-size-xlarge;
+      font-weight: $font-weight-medium;
+      margin-bottom: 8px;
+      color: $light-gray-color;
+    }
+
+    .cityTime {
+      color: $gray-color;
+    }
+  }
+  .cityTemp {
+    font-size: $font-size-xxlarge;
+    color: $light-gray-color;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cityCard {
+    .cityInfo {
+      .cityImage {
+        width: 80px;
+        height: 80px;
+      }
+
+      .cityName {
+        font-size: $font-size-large;
+      }
+
+      .cityTime {
+        font-size: $font-size-small;
+      }
+    }
+
+    .cityTemp {
+      font-size: $font-size-xlarge;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cityCard {
+    .cityInfo {
+      .cityImage {
+        width: 80px;
+        height: 80px;
+      }
+
+      .cityName {
+        font-size: $font-size-normal;
+      }
+
+      .cityTime {
+        font-size: $font-size-xsmall;
+      }
+    }
+
+    .cityTemp {
+      font-size: $font-size-large;
+    }
+  }
+}
