@@ -22,8 +22,6 @@ This project is a weather application that fetches weather data from:
 
 https://us-central1-mobile-assignment-server.cloudfunctions.net/weather
 
-
-
 The application allows users to:
 
 - View all cities available in the API.
@@ -102,42 +100,36 @@ React + TypeScript provides type safety and scalability. Vite ensures fast front
 
 ### Installation
 
-
+```bash
 git clone <REPO_URL>
 cd cuddlynest-weather-app
 npm install
 
-Running the Front-End
-npm run dev
-Runs Vite dev server at http://localhost:5173 (default Vite port)
 
-Running the Server
+#Running the Front-End
 node server.js
 # or for development with hot reload
 nodemon server.js
-Building for Production
 
-npm run build
-Tech Stack
-React 18 + TypeScript
 
-Vite
+#Running the Server
+node server.js
+# or for development with hot reload
+nodemon server.js
 
-React Router (Outlet for nested routing)
 
-React Query
+## Tech Stack
+- React 18 + TypeScript
+- Vite
+- React Router (Outlet for nested routing)
+- React Query
+- SCSS / CSS Modules
+- LocalStorage (caching for hidden cities)
+- Vitest (unit testing)
+- Node.js backend (server folder)
+- Nodemon for server development
 
-SCSS / CSS Modules
 
-LocalStorage (caching for hidden cities)
-
-Vitest (unit testing)
-
-Node.js backend (server folder)
-
-Nodemon for server development
-
-Contacts
+##Contacts
 Developer: Fidan Məmmədova
-
 GitHub: github.com/FidanMemmedova
