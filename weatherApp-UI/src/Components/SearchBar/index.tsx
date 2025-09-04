@@ -1,16 +1,31 @@
-import { useState } from "react"
-import style from "./SearchBar.module.scss"
+import { useState, useEffect } from "react";
+import style from "./SearchBar.module.scss";
 
-const SearchBar = () => {
-  const [searchedCity, setSearchedCity] = useState('')
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   setSearchedCity(e.target.value)
-  // }
-  return (
-    <>
-      <input placeholder="Search for cities" type="text" className={style.searchBar}/>
-    </>
-  )
+interface Props {
+  onSearch: (value: string) => void;
 }
 
-export default SearchBar
+const SearchBar = ({ onSearch }: Props) => {
+  const [value, setValue] = useState("");
+
+  useEffect(() => {
+    const trimmedValue = value.trim();
+    const timeout = setTimeout(() => {
+      onSearch(trimmedValue);
+    }, 300);
+
+    return () => clearTimeout(timeout);
+  }, [value, onSearch]);
+
+  return (
+    <input
+      type="text"
+      placeholder="Search for cities"
+      className={style.searchBar}
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  );
+};
+
+export default SearchBar;

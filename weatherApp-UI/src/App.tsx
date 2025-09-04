@@ -1,6 +1,5 @@
 import Container from "./Components/Container"
-
-import "./Assets/resets.scss"
+import "./Assets/scss/resets.scss"
 import { Outlet } from "react-router-dom"
 function App() {
 
