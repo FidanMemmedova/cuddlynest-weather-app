@@ -22,8 +22,7 @@ This project is a weather application that fetches weather data from:
 
 https://us-central1-mobile-assignment-server.cloudfunctions.net/weather
 
-markdown
-Copy code
+
 
 The application allows users to:
 
@@ -103,25 +102,21 @@ React + TypeScript provides type safety and scalability. Vite ensures fast front
 
 ### Installation
 
-```bash
+
 git clone <REPO_URL>
 cd cuddlynest-weather-app
 npm install
+
 Running the Front-End
-bash
-Copy code
 npm run dev
 Runs Vite dev server at http://localhost:5173 (default Vite port)
 
 Running the Server
-bash
-Copy code
 node server.js
 # or for development with hot reload
 nodemon server.js
 Building for Production
-bash
-Copy code
+
 npm run build
 Tech Stack
 React 18 + TypeScript
